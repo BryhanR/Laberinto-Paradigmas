@@ -1,0 +1,108 @@
+
+<!--
+* 			INTEGRANTES:
+*
+*	ALEXANDRA AGUILAR NAJERA	304780037
+*	MASIEL MORA RODRIGUEZ		604190071
+* 	BRYHAN RODRIGUEZ MORA		115420325
+*	JEAN CARLO VARGAS ZUÑIGA	402220474
+*
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="../public/javascripts/Point.js"></script>
+	<script type="text/javascript" src="../public/javascripts/Model.js"></script>
+	<script type="text/javascript" src="../public/javascripts/Controller.js"></script>
+	<script type="text/javascript" src="../public/javascripts/View.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="../public/javascripts/jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>
+	<script type="text/javascript" src="../public/javascripts/demo.js"></script>
+
+	<link rel="stylesheet" href="../public/stylesheets/demo.css">
+    <title>Laberinto</title>
+  </head>	 
+  <body>	
+		<audio preload visible='false' id ='audioPared' src="../public/images/error"></audio>
+		<audio preload visible='false' id ='audioCamino' src="../public/images/paso" ></audio>
+  <div>
+  <table>
+	<tr>
+		<td>
+		<div style= ' background-color:gray;border: 8px groove blue; width:305px; padding:4px' >
+			<div>
+				Nick:
+				<input type="input" id="nick" value="">
+				<input type="button" id ="login_logout" value="Iniciar">
+  			</div>
+			<div id = 'controles' style='visibility:hidden'>
+				<div>
+					Modo:
+					<select id="ModoJuego">
+						<option value="1">Server</option>
+						<option value="0" selected>Local</option>
+					</select>
+				</div>
+				<div>
+					Dificultad:
+					<select id="opcionDificultad">
+						<option value="10" selected>Facil</option>
+						<option value="20">Intermedio</option>
+						<option value="30">Avanzado</option>
+						<option value="40">Experto</option>
+						<input type="button" id="Refresh" value="Nuevo" >
+					</select>
+				</div>	
+				<center>
+				<p><div style='border:2px solid white;width:140px;height:70'>
+					<center>Color</center><b>&nbspLineas &nbsp &nbsp &nbsp Fondo	<br>				
+						<input  id="colorLinea" type="color" value="#000000" style='width:60px;height:20px'/> 
+						&nbsp &nbsp
+						<input id="colorFondo" type="color" value="#A2E219" style='width:60px;height:20px'/>					
+					
+				</div></p>
+				</center>
+				<div>
+					<button id="solve">Resolver</button><!--- Nuevo -->
+				
+					<a id="download" onclick=" descargarCanvas(this, 'canvas', 'Laberinto.png');">
+					<button id = "descargarIMG">Descargar Imagen...</button></a> <!--- Nuevo -->
+					<input type = "button" id = "sound" value = "MUTE">
+					<input type = "button" id = "reset" value = "RESET">
+				</div>
+				<br>
+				<center><div>
+					<button id="save">Guardar</button><!--- Nuevo -->
+					<button id="get" >Recuperar</button><!--- Nuevo -->
+				</div></center>
+			</div>
+			</div>
+		</td>
+		<td>
+			<div style = 'margin-left:20px'>
+				<center>
+					<canvas id="canvas" width="300" height="300" ></canvas>
+				</center>
+			</div> 
+		</td>
+		<td><!-- Nuevo inicio -->
+	
+			<div class="overlay-container" >
+				<div class="window-container zoomin">
+					<h3>Felicidades has ganado...!!!</h3> 
+					<br/>
+					<span class="close">Cerrar</span>
+				</div>
+			</div>
+		</td> <!-- Nuevo fin -->
+	</tr>
+  </table>
+    
+  
+  
+  <script>
+	let v = new View();
+  </script>
+    </body>
+</html> 

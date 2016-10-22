@@ -1,0 +1,11 @@
+{
+  "name": "laberinto",
+  "version": "1.0.0",
+  "private": false,
+  "dependencies": {
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+	"mongoose":"*",
+	"body-parser":"~1.10.1"
+  }
+}
